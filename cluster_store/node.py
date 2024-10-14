@@ -6,7 +6,7 @@ def start(node_port,node_ip,primarynode_port,primarynode_ip):
     
     #socket para receber conexoes
     server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_sock.bind((node_ip, 0))
+    server_sock.bind((node_ip, node_port))
     server_sock.listen()
 
     address, port = server_sock.getsockname()
